@@ -16,8 +16,20 @@
 ### [Link Tree]
 
 - Descrição: Redirecionador de Links
-- Tecnologias utilizadas: Html, CSS
+- Tecnologias utilizadas: Html e CSS
 - Link: [Redirecionador de Links](https://feliphe-blatt.github.io/links/)
+  
+### [C.R.U.D. de tarefas]
+
+- Descrição: Gerencia tarefas que ficam salvas na memória do navegador
+- Tecnologias utilizadas: Html, CSS e JS
+- Link: [C.R.U.D. de tarefas](https://feliphe-blatt.github.io/tarefas/)
+  
+### [Tabelas e Formularios]
+
+- Descrição: Exemplos de uso de tabelas criadas à partir de formulários
+- Tecnologias utilizadas: Html, CSS e JS
+- Link: [Tabelas e formulários](https://feliphe-blatt.github.io/form-tables/)
   
 ## Contato
 
