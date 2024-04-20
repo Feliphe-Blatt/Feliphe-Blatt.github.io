@@ -1,73 +1,104 @@
-@media (max-width: 760px){
-    body {
-        flex-direction: column-reverse;
-    }
-    #quadro {
-        width: 97vw;
-        height: 50vh;
-    }
-    #prancheta {
-        margin: 2vh;
-        height: 56vw;
-        width: 50vw;
-    }
-    #secoes li {
-        font-size: 16px;
-        padding: 1% 0vw;
-    }
-    #secoes li a {
-        font-size: 14px;
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* Estilos para telas entre 992px e 1200px */
+@media screen and (max-width: 1200px) {
+
+    #secoes {
+        margin: auto 1.4rem;
+        justify-content: space-between;
     }
 }
-@media (max-height: 480px){
-    body {
-        flex-direction: row;
+
+/* Estilos para telas entre 768px e 991px */
+@media screen and (max-width: 991px) {
+
+    .menu-item a {
+        font-size: 2.4rem;
     }
-    #quadro {
-        width: 60vw;
-        height: 97vh;
+
+    #texto-geral {
+        font-size: 1.6rem;
     }
-    #prancheta {
-        margin: 2vh;
-        height: 50vw;
-        width: 40vw;
+
+    .destaque {
+        font-size: 1.8rem;
     }
-    #secoes li {
-        font-size: 16px;
-        padding: 1% 0vw;
+
+    .topico {
+        font-size: 1.8rem;
     }
-    #secoes li a {
-        font-size: 16px;
-    }
-}
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-@media (min-width: 721px) {
-    #foto-perfil {
-        height: 133.33px;
-        width: 100px;
-    }
-    #pino-icon {
-        left: 40px;
-        height: 26px;
-    }
-    #pino-icon:hover {
-        height: 40px;
-        left: 30px;
+
+    .detalhes li {
+        font-size: 1.7rem;
     }
 }
-@media (max-width: 460px) {
-    #foto-perfil {
-        height: 100px;
-        width: 75px;
-        margin-right: 1vh;
-    }
-    #pino-icon {
-        left: 30px;
-        height: 26px;
-    }
-    #pino-icon:hover {
-        height: 40px;
-        left: 20px;
+
+/* Estilos para telas entre 600px e 767px */
+@media screen and (max-width: 767px) {
+    #apresentacao-geral {
+        flex-direction: column;
     }
 }
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* Estilos para telas menores que 600px */
+@media screen and (max-width: 600px) {
+    .menu-item a {
+        font-size: 1.8rem;
+    }
+
+    #infos {
+        font-size: 1.3rem;
+    }
+
+    #texto-geral {
+        font-size: 1.6rem;
+    }
+
+    .destaque {
+        font-size: 1.7rem;
+    }
+
+    .topico {
+        font-size: 1.7rem;
+    }
+
+    .detalhes li {
+        font-size: 1.5rem;
+    }
+}
+
+/* Estilos para telas menores que 480px */
+@media screen and (max-width: 480px) {
+    #secoes {
+        flex-direction: column;
+    }
+
+    .menu-item {
+        margin: max(1.2vh, 1.2vw);
+    }
+
+    .menu-item a {
+        font-size: 1.8rem;
+    }
+
+    .menu-item a::before {
+        width: min(.5vh, .5vw);
+    }
+
+    .menu-item a::after {
+        height: min(.5vh, .5vw);
+    }
+
+    #geral {
+        width: 90%;
+    }
+
+    .topico {
+        font-size: 1.6rem;
+    }
+
+    .detalhes li {
+        font-size: 1.3rem;
+    }
+}
