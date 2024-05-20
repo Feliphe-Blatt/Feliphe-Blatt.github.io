@@ -8,7 +8,7 @@
     --estilo-fonte-padrao: 'Roboto', sans-serif;
     --estilo-fonte-titulo: 'Montserrat', sans-serif;
 
-    --display-infos: flex;
+    --display-infos: none;
     --display-sites: flex;
 
     --url-borda-imagem: url("../img/wooden-frame.webp");
@@ -360,8 +360,9 @@ section {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #sites {
     display: var(--display-sites);
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     padding: var(--espaco-sessoes);
     background-color: var(--fundo-sessao);
@@ -372,8 +373,21 @@ section {
     transition: var(--transicao-padrao);
 }
 
+.sites div {
+    flex-wrap: wrap;
+}
+
 #sites:hover {
     box-shadow: var(--sombra-box-expand);
+}
+
+.arrow {
+    transition: var(--transicao-padrao);
+}
+
+.arrow:hover {
+    cursor: pointer;
+    filter: var(--sombra-especial);
 }
 
 #sites-preview {
