@@ -8,7 +8,7 @@
     --estilo-fonte-padrao: 'Roboto', sans-serif;
     --estilo-fonte-titulo: 'Montserrat', sans-serif;
 
-    --display-infos: none;
+    --display-infos: flex;
     --display-sites: flex;
 
     --url-borda-imagem: url("../img/wooden-frame.webp");
@@ -29,7 +29,7 @@
 
     --texto-cor-padrao: rgb(39, 39, 39);
     --texto-cor-destaque: rgb(8, 51, 54);
-    --texto-sombra-padrao: 1px 1px .2rem rgb(100, 100, 100);
+    --texto-sombra-padrao: 1px 1px 2px rgba(0, 0, 0, 0.3);
     --texto-sombra-titulo: 1px 1px .2rem rgb(100, 100, 100), 1px 1px .4rem rgb(191, 255, 234);
 
     --link-efeito: rgb(39, 39, 39);
@@ -49,7 +49,7 @@
             rgba(0, 0, 0, .3) 100%);
 
     --transicao-padrao: all 200ms ease-in-out;
-    --transicao-menu: all 200ms ease-in-out;
+    --transicao-menu: all 300ms ease-in-out;
 
     --sombra-box-padrao: .1vw .1vw .5vw rgba(0, 0, 0, 0.7);
     --sombra-box-expand: .1vw .1vw 1vw rgba(0, 0, 0, 1);
@@ -80,19 +80,18 @@
 *,
 *::before,
 *::after {
+    font-size: var(--fonte-geral);
+    text-shadow: var(--texto-sombra-padrao);
     color: var(--texto-cor-padrao);
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-size: var(--fonte-geral);
     scroll-behavior: smooth !important;
 }
 
 body {
-    display: flex;
     justify-content: center;
     align-items: center;
-    overflow-x: auto;
     background-color: var(--fundo-parede);
     font-family: var(--estilo-fonte-padrao);
     font-weight: var(--destaque-normal);
@@ -109,9 +108,8 @@ body {
     justify-content: space-between;
     overflow: auto;
     margin: 3dvh auto;
-    padding: 0 9px;
     height: 94dvh;
-    width: 86vw;
+    width: 94vw;
     background-color: var(--fundo-quadro-padrao);
     border: 1vw solid var(--fundo-transparente);
     background-image: var(--radial-padrao);
@@ -120,118 +118,43 @@ body {
     border-image-width: 1vw;
     border-image-outset: 0;
     border-image-repeat: round round;
-    box-shadow: 0 0 1vw rgba(0, 0, 0, 1);
+    box-shadow: var(--sombra-box-padrao);
     transition: var(--transicao-padrao);
-}
-
-section {
-    margin: 1rem 0;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Seções do site
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-#menu {
+header, .navbar-brand, .nav-link {
+    transition: var(--transicao-menu);
+}
+
+header {
     width: 100%;
-    border-bottom: .2rem ridge var(--texto-cor-destaque);
+    margin-bottom: 2vh;
+    box-shadow: var(--sombra-box-padrao);
+}
+header:hover {
+    box-shadow: var(--sombra-box-expand);
 }
 
-#secoes {
-    padding: 2rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    list-style: none;
+.navbar-brand {
+    font-size: var(--fonte-subtitulo);
 }
 
-.menu-item {
-    transition: var(--transicao-menu);
-}
-
-.menu-item a {
-    padding: .8rem;
-    position: relative;
-    text-decoration: none;
-    color: var(--texto-cor-padrao);
-    font-style: var(--estilo-fonte-titulo);
-    font-size: var(--fonte-titulo);
-    text-shadow: var(--texto-sombra-padrao);
-    transition: var(--transicao-menu);
-}
-
-.menu-item a:hover,
-.menu-item a:focus {
+.navbar-brand:hover, .nav-link:hover {
     color: var(--texto-cor-destaque);
-    text-shadow: var(--texto-sombra-padrao);
 }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Efeito no link do menu
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-.menu-item a::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 0%;
-    width: .2rem;
-    background: var(--link-efeito);
-    transition: var(--transicao-padrao);
-}
-
-.menu-item a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: .2rem;
-    background: var(--link-efeito);
-    transition: var(--transicao-padrao);
-}
-
-.menu-item a:hover::after,
-.menu-item a:focus::after {
+.navbar-nav {
     width: 100%;
+    justify-content: space-evenly;
 }
 
-.menu-item a:hover::before,
-.menu-item a:focus::before {
-    height: 90%;
+.dropdown-item:hover {
+    color: var(--texto-cor-destaque);
 }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Efeito mudança de seção
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fade-out {
-    100% {
-        opacity: 0;
-    }
-
-    0% {
-        opacity: 1;
-    }
-}
-
-@keyframes slide-up {
-    0% {
-        transform: translateY(100%);
-    }
-
-    100% {
-        transform: translateY(0%);
-    }
-}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Wrapper geral
