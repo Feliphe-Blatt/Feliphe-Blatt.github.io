@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.css">
     <!-- Estilos -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -33,11 +34,11 @@
 <body>
 
     <!-- Quadro Principal -->
-    <main id="quadro">
+    <main id="quadro" class="container p-0 d-flex align-items-center">
 
         <!-- Cabeçalho -->
-        <header class="sticky-top">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <header class="container p-0 sticky-top">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary p-2">
                 <div class="container-fluid">
 
                     <!-- Início -->
@@ -80,66 +81,49 @@
                 </div>
             </nav>
         </header>
-        <!---------------------------------------------------------------->
 
-        <section id="infos">
+        <!-- Infos -->
+        <section id="infos" class="container">
+            <div id="apresentacao-geral" class="row m-2 align-items-center">
 
-            <!---------------------------------------------------------------->
-            <div id="apresentacao-geral">
-
-                <figure id="foto-perfil" title="Foto de Feliphe">
-                    <img id="pino-icon" src="./assets/img/pin.png" alt="Ícone de Pino">
-                </figure>
-
-                <div id="geral" class="wrapper-descricao">
-                    <p id="texto-geral">
-                        Trabalho com <b class="destaque">Metodologias Ágeis</b>.
-                        <br><br>
-                        Atualmente estou imerso nos estudos, visando me tornar um desenvolvedor
-                        <b class="destaque">Full-Stack</b>.
-                        <br><br>
-                        Meus projetos anteriores envolvem o desenvolvimento em sistemas embarcados, destacando minha
-                        paixão por <b class="destaque">Automação residencial</b>.
-                        <br><br>
-                        No momento estou estudando uma parte mais avançada da
-                        <b class="destaque">Stack</b> que escolhi começar.
+                <div class="col m-1">
+                    <div class="container m-4 d-flex align-items-center justify-content-evenly">
+                        <figure id="foto-perfil" title="Foto de Feliphe">
+                            <img id="pino-icon" src="./assets/img/pin.png" alt="Ícone de Pino">
+                        </figure>
+                    </div>
+                    <p>
+                        Olá! Meu nome é <b class="destaque">Feliphe Blatt</b> e sou um desenvolvedor full-stack com paixão por sistemas embarcados e tecnologia. Tenho uma sólida experiência em várias linguagens de programação e ferramentas, além de um forte interesse em desenvolvimento colaborativo.
                     </p>
                 </div>
+                <div class="col m-1">
 
-            </div>
-            <!---------------------------------------------------------------->
-            <div id="apresentacao-dev">
-
-                <h1 class="topico">Sistemas embarcados e Desenvolvedor Full-Stack</h1>
-
-                <div class="subTopico">
-
-                    <div class="wrapper-descricao">
-                        <ul class="detalhes">
-                            <li>Git</li>
-                            <li>Clean Code</li>
-                            <li>Documentação</li>
-                            <li>Protocolos de Comunicação</li>
-                            <li>Seg. no Desenvolvimento</li>
+                    <div class="col">
+                        <h2>Linguagens:</h2>
+                        <ul>
+                            <li>C/C++</li>
+                            <li>Html + CSS</li>
+                            <li>JavaScript</li>
+                            <li>Python</li>
                         </ul>
                     </div>
-
-                    <div class="wrapper-descricao">
-                        <ul class="detalhes">
-                            <li>C++</li>
-                            <li>Python</li>
-                            <li>Html</li>
-                            <li>Css</li>
-                            <li>JavaScript</li>
+                
+                    <div class="col">
+                        <h2>ferramentas e tecnologias</h2>
+                        <ul>
+                            <li>Git</li>
+                            <li>Figma</li>
+                            <li>Flask</li>
+                            <li>BootStrap</li>
+                            <li>Protocolos de Comunicação</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!--------------------------------------------------------------------------------------------------------------------------->
-
-        <section id="sites">
+        <!-- Sites -->
+        <section id="sites" class="container align-items-center">
 
             <svg id="leftArrow" class="arrow" width="60px" height="60px" viewBox="0 0 24 24" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -147,43 +131,57 @@
                     stroke-linejoin="round" />
             </svg>
 
-            <!---------------------------------------------------------------->
-            <div>
-                <div id="sites-preview">
+            <div class="container">
 
-                    <figure class="site-desktop">
+                <!-- Preview Desktop/Mobile -->
+                <div class="row">
 
-                        <a target="_blank" href="https://feliphe-blatt.github.io/tarefas/">
+                    <div class="col m-3 d-flex align-items-center justify-content-center">
 
-                            <img src="./assets/img/notebook.png" id="desktop" title="Preview Versão Desktop"
-                                alt="Preview Versão Desktop do Site">
-                        </a>
-                    </figure>
-                    <!---------------------------------------------------------------->
-                    <figure id="site-mobile">
-                        <a target="_blank" href="https://feliphe-blatt.github.io/tarefas/">
+                        <figure class="site-desktop">
+                    
+                            <a target="_blank" href="https://feliphe-blatt.github.io/tarefas/">
+                    
+                                <img src="./assets/img/notebook.png" id="desktop" title="Preview Versão Desktop"
+                                    alt="Preview Versão Desktop do Site">
+                            </a>
+                        </figure>
+                    </div>
 
-                            <img src="./assets/img/celular.png" class="phone" title="Preview Versão Mobile"
-                                alt="Preview Versão Mobile do Site">
-                        </a>
-                    </figure>
+                    <div class="col m-3 d-flex align-items-center justify-content-center">
+
+                        <figure id="site-mobile" class="d-flex align-items-center justify-content-center">
+
+                            <a target="_blank" href="https://feliphe-blatt.github.io/tarefas/">
+    
+                                <img src="./assets/img/celular.png" class="phone" title="Preview Versão Mobile"
+                                    alt="Preview Versão Mobile do Site">
+                            </a>
+                        </figure>
+                    </div>
+
+                </div>
+                <hr>
+                <div id="site-descricao" class="row">
+                    <div class="col">
+                        <h2>Descrição:</h2>
+                        <p>C.R.U.D. de Tarefas</p>
+                    </div>
+                    
+                    <div class="col">
+                        <ul>
+                        <li>Visualize</li>
+                        <li>Adicione</li>
+                        <li>Altere</li>
+                        <li>Apague</li>
+                        </ul>
+                        <section class="observacao">
+                            * Ninguém verá as suas tarefas salvas, <br>
+                            elas ficam na memória do seu navegador.
+                        </section>
+                    </div>
                 </div>
 
-                <!---------------------------------------------------------------->
-                <div id="site-descricao" class="wrapper-descricao">
-                    <legend>Descrição:</legend>
-                    <ul class="detalhes">
-                        <br>
-                        <p class="destaque">C.R.U.D. de Tarefas</p>
-                        <br>
-                        <li>Adicione, Altere ou Apague tarefas a fazer.</li>
-                        <br>
-                    </ul>
-                    <section class="observacao">
-                        * Ninguém verá as suas tarefas salvas, <br>
-                        elas ficam na memória do seu navegador.
-                    </section>
-                </div>
             </div>
 
             <svg id="rightArrow" class="arrow" width="60px" height="60px" viewBox="0 0 24 24" fill="none"
@@ -194,10 +192,10 @@
 
         </section>
 
-        <!--------------------------------------------------------------------------------------------------------------------------->
-        <section id="contatos" class="container">
+        <!-- Contatos -->
+        <section id="contatos" class="container d-flex justify-content-evenly">
 
-            <div class="wrapper-contato">
+            <div class="wrapper-contato container">
                 <a target="_blank" href="./assets/downloads/FelipheBlatt-2024.pdf">
                     <svg width="6rem" height="6rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3.5 8H3V7H3.5C3.77614 7 4 7.22386 4 7.5C4 7.77614 3.77614 8 3.5 8Z" fill="#083336" />
@@ -210,7 +208,7 @@
                 </a>
             </div>
             <!---------------------------------------------------------------->
-            <div class="wrapper-contato">
+            <div class="wrapper-contato container">
                 <a target="_blank"
                     href="https://api.whatsapp.com/send?phone=5583981858594&text=Oi%20Feliphe%2C%20vim%20pelo%20seu%20Portfolio!">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="6rem" height="6rem"
@@ -222,7 +220,7 @@
                 </a>
             </div>
             <!---------------------------------------------------------------->
-            <div class="wrapper-contato">
+            <div class="wrapper-contato container">
                 <a target="_blank" href="https://github.com/Feliphe-Blatt">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="6rem" height="6rem"
                         viewBox="0 0 50 50" style="fill:#083336;">
@@ -244,6 +242,7 @@
                 </a>
             </div>
         </section>
+
     </main>
 </body>
 
