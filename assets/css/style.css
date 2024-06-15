@@ -109,6 +109,7 @@ body {
     flex-direction: column;
     overflow: auto;
     margin: 3dvh auto;
+    padding: 0;
     height: 94dvh;
     width: 94vw;
     background-color: var(--fundo-quadro-padrao);
@@ -131,6 +132,14 @@ body {
     font-size: var(--fonte-destaque);
     letter-spacing: 1px;
     text-shadow: var(--texto-sombra-padrao);
+}
+
+
+#infos, #sites {
+    max-width: 94%;
+}
+#contatos {
+    max-width: 98%;
 }
 
 
@@ -190,6 +199,7 @@ header:hover {
 #infos {
     display: var(--display-infos);
     flex-direction: column;
+    margin-top: var(--espaco-padrao);
     padding: var(--espaco-sessoes);
     background-color: var(--fundo-sessao);
     border: var(--borda-padrao);
