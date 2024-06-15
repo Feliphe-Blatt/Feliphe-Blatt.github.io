@@ -1,8 +1,6 @@
 # Portfólio: Feliphe S. Blatt
 
-- Portfólio 1.6 (Incompleto, ainda em atualização): [Portfólio 1.6](https://feliphe-blatt.github.io/estudos/CursoJS/portfolio_1.6/)
-  
-- Primeira versão do portfólio (para acompanhar a evolução): [Portfólio 1.0](https://feliphe-blatt.github.io/portfolio)
+- Deploy Portfólio 1.6 (em atualização): [Portfólio 1.6](https://feliphe-blatt.github.io/portfolio)
 
 ## Tecnologias utilizadas para desenvolver o portfólio até então
 
