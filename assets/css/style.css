@@ -124,6 +124,14 @@ body {
     transition: var(--transicao-padrao);
 }
 
+#infos, #sites {
+    max-width: 94%;
+}
+#contatos {
+    max-width: 98%;
+}
+
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Texto em Destaque
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -134,13 +142,6 @@ body {
     text-shadow: var(--texto-sombra-padrao);
 }
 
-
-#infos, #sites {
-    max-width: 94%;
-}
-#contatos {
-    max-width: 98%;
-}
 
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -169,11 +170,6 @@ header:hover {
 
 .navbar-brand:hover, .nav-link:hover {
     color: var(--texto-cor-destaque);
-}
-
-.navbar-nav {
-    width: 100%;
-    justify-content: space-evenly;
 }
 
 .dropdown-menu {
