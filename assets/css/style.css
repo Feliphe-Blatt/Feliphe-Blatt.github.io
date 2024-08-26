@@ -106,6 +106,9 @@ body {
     Quadro Principal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #quadro {
+    /*  Desempenho da página  */
+    contain: paint;
+
     flex-direction: column;
     overflow: auto;
     margin: 3dvh auto;
