@@ -190,7 +190,13 @@ header:hover {
 .dropdown-item:hover {
     color: var(--texto-cor-destaque);
 }
-
+.bi {
+    transition: var(--transicao-menu);
+    filter: var(--sombra-especial-expand);
+}
+.bi:hover {
+    filter: var(--sombra-especial);
+}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Apresentação de conhecimentos
