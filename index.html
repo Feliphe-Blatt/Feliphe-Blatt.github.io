@@ -70,7 +70,6 @@
                                     <li><a class="dropdown-item" href="#">Primeiros Socorros</a></li>
                                     <li><a class="dropdown-item" href="#">C.R.U.D.: Vanilla Js</a></li>
                                     <li><a class="dropdown-item" href="#">C.R.U.D.: Flask + Bs</a></li>
-                                    <li><a class="dropdown-item" href="#">Tabelas e Formulários</a></li>
                                     <li><a class="dropdown-item" href="#">Link-Tree</a></li>
                                 </ul>
                             </li>
@@ -157,59 +156,64 @@
 
         <section id="sites" class="container align-items-center">
 
-            <div class="container">
+            <!-- splide slider -->
+            <div class="splide" id="splide-slider-sobre">
+                <div class="splide__track">
+                    <ul class="splide__list">
 
-                <!-- Preview Desktop/Mobile -->
-                <div class="row">
+                        <!--------------------------------------------------------->
+                        <li class="splide__slide">
 
-                    <div class="col m-3 d-flex align-items-center justify-content-center">
+                            <h2 class="display-5 p-2  text-center">Gerenciador de tarefas</h2>
 
-                        <figure class="site-desktop">
+                            <div class="container px-5">
+                                <div class="row flex-column">
+                                    <div class="col-12 d-flex align-items-center justify-content-evenly">
 
-                            <a target="_blank" href="https://feliphe-blatt.github.io/tarefas/">
+                                        <figure class="site-desktop">
+                                            <a target="_blank" href="https://feliphe-blatt.github.io/tarefas/">
 
-                                <img src="./assets/img/notebook.png" id="desktop" title="Preview Versão Desktop"
-                                    alt="Preview Versão Desktop do Site">
-                            </a>
-                        </figure>
-                    </div>
+                                                <img src="./assets/img/notebook.png" id="desktop"
+                                                    title="Preview Versão Desktop" alt="Preview Versão Desktop do Site">
+                                            </a>
+                                        </figure>
 
-                    <div class="col m-3 d-flex align-items-center justify-content-center">
+                                        <figure class="site-mobile">
+                                            <a target="_blank" href="https://feliphe-blatt.github.io/tarefas/">
 
-                        <figure id="site-mobile" class="d-flex align-items-center justify-content-center">
+                                                <img src="./assets/img/celular.png" id="borda-celular"
+                                                    title="Preview Versão Mobile" alt="Preview Versão Mobile do Site">
+                                            </a>
+                                        </figure>
+                                    </div>
 
-                            <a target="_blank" href="https://feliphe-blatt.github.io/tarefas/">
-
-                                <img src="./assets/img/celular.png" class="phone" title="Preview Versão Mobile"
-                                    alt="Preview Versão Mobile do Site">
-                            </a>
-                        </figure>
-
-                    </div>
-
+                                    <!-- Descrição e tecnologias-->
+                                    <div class="container">
+                                        <div class="row p-3">
+                                            <div class="col-md-6">
+                                                <h3>Descrição:</h3>
+                                                <p>
+                                                    Projeto de um gerenciador de tarefas com as funções de criar, ler,
+                                                    atualizar e deletar tarefas.
+                                                </p>
+                                            </div>
+                                            <div class="col p-3">
+                                                <h3 class="text-center">Tecnologias:</h3>
+                                                <ul class="fit text-start">
+                                                    <li>HTML/CSS</li>
+                                                    <li>JavaScript</li>
+                                                    <li>Bootstrap</li>
+                                                    <li>Splide</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--------------------------------------------------------->
+                    </ul>
                 </div>
-                <hr>
-                <div id="site-descricao" class="row">
-
-                    <div class="col">
-                        <h2>Descrição:</h2>
-                        <p>C.R.U.D. de Tarefas</p>
-                        <ul>
-                            <li>Visualize</li>
-                            <li>Adicione</li>
-                            <li>Altere</li>
-                            <li>Apague</li>
-                        </ul>
-                    </div>
-
-                    <div class="col d-flex align-items-center ju">
-                        <section class="observacao">
-                            * Ninguém verá as suas tarefas salvas, elas ficam na memória do seu navegador.
-                        </section>
-                    </div>
-
-                </div>
-
             </div>
 
         </section>

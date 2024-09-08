@@ -8,7 +8,7 @@
     --estilo-fonte-padrao: 'Roboto', sans-serif;
     --estilo-fonte-titulo: 'Montserrat', sans-serif;
 
-    
+
     /* Controle Sessões */
     --display-infos: flex;
     --display-sites: flex;
@@ -38,7 +38,7 @@
 
     /* Sombra de Texto */
     --texto-sombra-padrao: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    
+
     /* Cores Gerais */
     --fundo-parede: rgb(8, 51, 54);
     --fundo-quadro-padrao: rgb(224, 255, 245);
@@ -56,11 +56,11 @@
     /* Espaçamento */
     --espaco-padrao: max(1vw, 1vh);
     --espaco-sessoes: max(.5vw, .5vh);
-    
+
     /* Transições */
     --transicao-padrao: all 200ms ease-in-out;
     --transicao-menu: all 300ms ease-in-out;
-    
+
     /* Sombras box */
     --sombra-box-padrao: .1vw .1vw .5vw rgba(0, 0, 0, 0.7);
     --sombra-box-expand: .1vw .1vw 1vw rgba(0, 0, 0, 1);
@@ -76,12 +76,15 @@
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, .3);
 }
+
 ::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.5);
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.9);
 }
@@ -100,7 +103,6 @@ body {
     font-weight: var(--destaque-normal);
     letter-spacing: .5px;
 }
-
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Quadro Principal
@@ -127,9 +129,11 @@ body {
     transition: var(--transicao-padrao);
 }
 
-#infos, #sites {
+#infos,
+#sites {
     max-width: 94%;
 }
+
 #contatos {
     max-width: 98%;
 }
@@ -150,10 +154,15 @@ body {
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Menu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-header, .navbar-brand, .nav-link, .dropdown-menu {
+header,
+.navbar-brand,
+.nav-link,
+.dropdown-menu {
     transition: var(--transicao-menu);
 }
-header, .navbar {
+
+header,
+.navbar {
     border-radius: var(--borda-menu);
 }
 
@@ -162,6 +171,7 @@ header {
     margin-bottom: var(--espaco-padrao);
     box-shadow: var(--sombra-box-padrao);
 }
+
 header:hover {
     box-shadow: var(--sombra-box-expand);
 }
@@ -171,7 +181,8 @@ header:hover {
     font-size: var(--fonte-subtitulo);
 }
 
-.navbar-brand:hover, .nav-link:hover {
+.navbar-brand:hover,
+.nav-link:hover {
     color: var(--texto-cor-destaque);
 }
 
@@ -180,6 +191,7 @@ header:hover {
     overflow-y: auto;
     background-color: rgb(235, 235, 235);
 }
+
 .dropdown-menu:hover {
     background-color: rgb(215, 215, 215);
 }
@@ -187,13 +199,16 @@ header:hover {
 .dropdown-item {
     border-radius: .5rem;
 }
+
 .dropdown-item:hover {
     color: var(--texto-cor-destaque);
 }
+
 .bi {
     transition: var(--transicao-menu);
     filter: var(--sombra-especial-expand);
 }
+
 .bi:hover {
     filter: var(--sombra-especial);
 }
@@ -213,6 +228,7 @@ header:hover {
     box-shadow: var(--sombra-box-padrao);
     transition: var(--transicao-padrao);
 }
+
 #infos:hover {
     box-shadow: var(--sombra-box-expand);
 }
@@ -237,6 +253,7 @@ h2 {
     box-shadow: 0 0 .5vw rgba(0, 0, 0, .8);
     transition: var(--transicao-padrao);
 }
+
 #foto-perfil:hover {
     box-shadow: 0 0 1vw rgba(0, 0, 0, 1);
     transform: scale(1.1);
@@ -269,6 +286,7 @@ h2 {
     text-shadow: var(--texto-sombra-padrao);
     transition: var(--transicao-padrao);
 }
+
 #sites:hover {
     box-shadow: var(--sombra-box-expand);
 }
@@ -306,23 +324,45 @@ h2 {
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Preview versão Mobile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-#site-mobile {
+#borda-celular {
     background-image: var(--url-tarefas-mobile);
     background-size: 4.1em 8.64em;
     background-repeat: no-repeat;
     background-position: top .28em center;
 }
 
-.phone {
+#borda-celular {
     height: 9.1em;
     width: 4.6em;
-    filter: var(--sombra-especial);
     transition: var(--transicao-padrao);
+    filter: var(--sombra-especial);
 }
 
-.phone:hover {
+#borda-celular:hover {
     cursor: pointer;
     filter: var(--sombra-especial-expand);
+}
+
+/* Splide */
+
+.splide__track {
+    border-radius: 1rem;
+    box-shadow: var(--shadow-box-imagem);
+    background-color: transparent;
+}
+
+.splide__arrow {
+    transition: var(--transicao-padrao);
+    background-color: var(--cor-link-menu-hover);
+    opacity: .5;
+}
+
+.splide__slide {
+    border-radius: 1rem;
+}
+
+#splide-slider-sobre {
+    max-width: 100%;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~
