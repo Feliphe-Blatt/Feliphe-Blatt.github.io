@@ -18,6 +18,8 @@
     --url-foto-perfil: url("../img/profile-pic.webp");
     --url-tarefas-desktop: url("../img/task-desktop.webp");
     --url-tarefas-mobile: url("../img/task-mobile.webp");
+    --url-link-mobile: url("../img/link-mobile.webp");
+    --url-link-desktop: url("../img/link-desktop.webp");
 
     /* Tamanho de Fonte */
     --fonte-titulo: 2.6rem;
@@ -272,6 +274,24 @@ h2 {
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Apresentação dos sites com demonstração de tecnologia dominada
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    imagens de projeto
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#tarefas-desk {
+    background-image: var(--url-tarefas-desktop);
+}
+#tarefas-mob {
+    background-image: var(--url-tarefas-mobile);
+}
+
+#links-desk {
+    background-image: var(--url-link-desktop);
+}
+#links-mob {
+    background-image: var(--url-link-mobile);
+}
+
 #sites {
     display: var(--display-sites);
     flex-wrap: nowrap;
@@ -304,19 +324,18 @@ h2 {
     Preview versão Desktop
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .site-desktop {
-    background-image: var(--url-tarefas-desktop);
     background-size: 7.55em 4.3em;
     background-repeat: no-repeat;
     background-position: top .26em left .98em;
 }
 
-#desktop {
+.desktop{
     width: 9.5em;
     filter: var(--sombra-especial);
     transition: var(--transicao-padrao);
 }
 
-#desktop:hover {
+.desktop:hover{
     cursor: pointer;
     filter: var(--sombra-especial-expand);
 }
@@ -324,26 +343,27 @@ h2 {
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Preview versão Mobile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-#borda-celular {
-    background-image: var(--url-tarefas-mobile);
+.site-mobile {
     background-size: 4.1em 8.64em;
     background-repeat: no-repeat;
     background-position: top .28em center;
 }
 
-#borda-celular {
+.celular {
     height: 9.1em;
     width: 4.6em;
     transition: var(--transicao-padrao);
     filter: var(--sombra-especial);
 }
 
-#borda-celular:hover {
+.celular:hover {
     cursor: pointer;
     filter: var(--sombra-especial-expand);
 }
 
-/* Splide */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Splide
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 .splide__track {
     border-radius: 1rem;
@@ -368,10 +388,6 @@ h2 {
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Descrição do site
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-#site-descricao {
-    margin: auto .5vw;
-    padding: .5vw;
-}
 
 .observacao {
     font-size: var(--fonte-observacao);
