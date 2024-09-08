@@ -4,10 +4,10 @@
 
 ## Tecnologias utilizadas para desenvolver o portfólio até então
 
-- Html
+- Html + Css com variáveis de controle e Media Queries
 - SVG's para melhor desempenho ao carregar elementos
-- CSS com variáveis de controle e Media Queries
-- (Em progresso) JavaScript para tornar o site S.P.A. (Single Page Application)
+- BootStrap
+- Splide
 
 ## Projetos no Portfólio
 
