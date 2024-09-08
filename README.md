@@ -1,13 +1,26 @@
 # Portfólio: Feliphe S. Blatt
+- Portfólio (em atualização): [Portfólio 1.6](https://feliphe-blatt.github.io/portfolio)
 
-- Deploy Portfólio 1.6 (em atualização): [Portfólio 1.6](https://feliphe-blatt.github.io/portfolio)
+## Backlog do Portfólio
+
+### BackLog
+- [x] Estrutura básica do portfólio
+- [x] Criar seções de info, sites e contato
+- [x] Adicionar links para redes sociais
+- [x] Otimizar imagens com SVG e Webp
+
+### Na Sprint
+- [ ] Estudando e aplicando BootStrap e Splide
+- [ ] Melhorar a responsividade do site
+- [ ] Reformulando descrições de perfil e projetos
+- [ ] Adicionar projetos existentes ao portfólio
 
 ## Tecnologias utilizadas para desenvolver o portfólio até então
 
-- Html + Css com variáveis de controle e Media Queries
-- SVG's para melhor desempenho ao carregar elementos
+- Html + CSS com variáveis de controle e Media Queries
+- SVG's e Webp para melhor desempenho ao carregar elementos
 - BootStrap
-- Splide
+- Splide sliders
 
 ## Projetos no Portfólio
 
@@ -17,24 +30,32 @@
   > Redirecionador de Links
 - Tecnologias utilizadas: Html e CSS
 - Link: [Redirecionador de Links](https://feliphe-blatt.github.io/links/)
-  
+
 ### [C.R.U.D. de tarefas]
 
 - Descrição:
   > Gerencia tarefas que ficam salvas na memória do navegador
 - Tecnologias utilizadas: Html, CSS e JS
 - Link: [C.R.U.D. de tarefas](https://feliphe-blatt.github.io/tarefas/)
-  
+
 ### [Tabelas e Formularios]
 
 - Descrição:
   > Exemplos de uso de tabelas criadas à partir de formulários
 - Tecnologias utilizadas: Html, CSS e JS
 - Link: [Tabelas e formulários](https://feliphe-blatt.github.io/form-tables/)
-  
+
+### [Galeria de fotos]
+
+- Descrição:
+  > Exemplo de uma galeria de imagens responsiva
+- Tecnologias utilizadas: Html, CSS, JS, BootStrap e Splide
+- Link: [Galeria de fotos](https://feliphe-blatt.github.io/galeria/)
+
 ## Contato
 
 - E-mail: [felipheblatt@gmail.com]
 - LinkedIn: [Feliphe S. Blatt](https://www.linkedin.com/in/feliphe-blatt/)
-  
+
   > Demais contatos e download de currículo se encontram no portfólio ou LinkedIn
+
