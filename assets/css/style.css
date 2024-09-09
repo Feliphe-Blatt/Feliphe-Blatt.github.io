@@ -102,7 +102,6 @@
 body {
     background-color: var(--fundo-parede);
     font-family: var(--estilo-fonte-padrao);
-    font-weight: var(--destaque-normal);
     letter-spacing: .5px;
 }
 
