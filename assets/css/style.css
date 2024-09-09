@@ -1,118 +1,434 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Configuração geral das variáveis
+    Estilo padrão para larguras maiores que 1200px
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+:root {
+    font-size: 62.5%;
+
+    --estilo-fonte-padrao: 'Roboto', sans-serif;
+    --estilo-fonte-titulo: 'Montserrat', sans-serif;
+
+
+    /* Controle Sessões */
+    --display-infos: flex;
+    --display-sites: flex;
+
+    /* URL Imagens */
+    --url-borda-imagem: url("../img/wooden-frame.webp");
+    --url-foto-perfil: url("../img/profile-pic.webp");
+    --url-tarefas-desktop: url("../img/task-desktop.webp");
+    --url-tarefas-mobile: url("../img/task-mobile.webp");
+    --url-link-mobile: url("../img/link-mobile.webp");
+    --url-link-desktop: url("../img/link-desktop.webp");
+
+    /* Tamanho de Fonte */
+    --fonte-titulo: 2.6rem;
+    --fonte-subtitulo: 2rem;
+    --fonte-destaque: 1.9rem;
+    --fonte-geral: 1.8rem;
+    --fonte-observacao: 1.5rem;
+
+    /* Peso de Fonte */
+    --destaque-maximo: 900;
+    --destaque-alto: 800;
+    --destaque-medio: 650;
+    --destaque-normal: 550;
+
+    /* Cor de Texto */
+    --texto-cor-padrao: rgb(39, 39, 39);
+    --texto-cor-destaque: rgb(8, 51, 54);
+
+    /* Sombra de Texto */
+    --texto-sombra-padrao: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+    /* Cores Gerais */
+    --fundo-parede: rgb(8, 51, 54);
+    --fundo-quadro-padrao: rgb(224, 255, 245);
+    --fundo-sessao: rgba(0, 0, 0, 0.2);
+    --fundo-transparente: rgba(0, 0, 0, 0);
+
+    --radial-padrao: radial-gradient(rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, .1),
+            rgba(0, 0, 0, .3) 100%);
+
+    /* Borda */
+    --borda-padrao: solid .1vw rgba(0, 0, 0, .2);
+    --borda-menu: 0 0 .8rem .8rem;
+
+    /* Espaçamento */
+    --espaco-padrao: max(1vw, 1vh);
+
+    /* Transições */
+    --transicao-padrao: all 200ms ease-in-out;
+    --transicao-menu: all 300ms ease-in-out;
+
+    /* Sombras box */
+    --sombra-box-padrao: .1vw .1vw .5vw rgba(0, 0, 0, 0.7);
+    --sombra-box-expand: .1vw .1vw 1vw rgba(0, 0, 0, 1);
+    --sombra-box-lista: .1vw .1vw .5vw rgba(0, 0, 0, 0.4);
+
+    /* Sombras Especiais */
+    --sombra-especial: drop-shadow(.1rem .1rem .2rem rgba(0, 0, 0, 0.8));
+    --sombra-especial-expand: drop-shadow(.1rem .1rem .5rem rgba(191, 255, 234, .6));
+    --sombra-especial-menu: drop-shadow(.1rem .1rem .2rem rgba(0, 0, 0, 0.3));
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Smooth scroll e setup básico
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, .2);
+    background: rgba(0, 0, 0, .3);
 }
+
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.5);
 }
+
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.9);
 }
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth !important;
+
+*,
+*::before,
+*::after {
+    font-size: var(--fonte-geral);
+    text-shadow: var(--texto-sombra-padrao);
+    color: var(--texto-cor-padrao);
 }
+
 body {
-    font-family: 'Open Sans', sans-serif;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    overflow-x: auto;
-    background-color: rgba(0, 0, 0, .8);
+    background-color: var(--fundo-parede);
+    font-family: var(--estilo-fonte-padrao);
+    letter-spacing: .5px;
 }
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Quadro Principal
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #quadro {
+    /*  Desempenho da página  */
+    contain: paint;
+
+    flex-direction: column;
     overflow: auto;
-    display: grid;
-    align-items: center;
-    padding: 0vh 1vw;
-    margin: 1.5vh auto;
-    width: 66vw;
-    height: 97vh;
-    background-image:
-        radial-gradient(transparent, transparent,rgba(0,0,0, .5) 75%),
-        url("../img/pinboard.jpg");
-    background-size: cover;
-    background-position: left top;
-    border: 2vh solid transparent;
+    margin: 3dvh auto;
+    padding: 0;
+    height: 94dvh;
+    width: 94vw;
+    background-color: var(--fundo-quadro-padrao);
+    border: min(1vw, 1vh) solid var(--fundo-transparente);
+    background-image: var(--radial-padrao);
+    border-image-source: var(--url-borda-imagem);
     border-image-slice: 27 27 27 27;
-    border-image-width: 2vh;
+    border-image-width: min(1vw, 1vh);
     border-image-outset: 0;
     border-image-repeat: round round;
-    border-image-source: url("../img/wooden-frame.jpg");
-    box-shadow: 0 0 2vw rgba(0, 0, 0, 1);
-    transition: all 100ms ease-in-out;
+    box-shadow: var(--sombra-box-padrao);
+    transition: var(--transicao-padrao);
 }
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-#prancheta {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin: auto 2vw;
-    height: 28vw;
-    max-height: 290px;
-    width: 26vw;
-    max-width: 270px;
-    border-radius: 6%;
-    background-image: url("../img/prancheta.png");
-    background-size: cover;
-    background-position: top center;
-    border: .1vh solid rgba(0, 0, 0, .4);
-    filter: drop-shadow(0vw 0vh .5vw rgba(0, 0, 0, .8));
-    transition: all 200ms ease-in-out;
+
+#infos,
+#sites,
+#contatos {
+    width: 94%;
+    max-width: 1000px;
 }
-#prancheta:hover {
-    filter: drop-shadow(0vw 0vh 1vw rgba(0, 0, 0, 1));
+
+#contatos {
+    width: 98%;
 }
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-#secoes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Texto em Destaque
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.destaque {
+    color: var(--texto-cor-destaque);
+    letter-spacing: 1px;
+    text-shadow: var(--texto-sombra-padrao);
 }
-#secoes li {
-    list-style: none;
-    font-family: sans-serif;
-    font-weight: bolder;
-    font-size: 26px;
-    margin: 3% 0vw;
-    position: relative;
-    padding-left: .5vw;
-    width: fit-content;
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    List Group
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.list-group {
+    box-shadow: var(--sombra-box-lista);
 }
-#secoes a {
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    transition: all 200ms ease-in-out;
-    color: rgb(50, 0, 0);
-    text-shadow: 0 0 .5vw rgba(0, 0, 0, .5);
+
+.limpo {
+    background-color: rgba(255, 255, 255, .7);
 }
-#secoes a::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 90%;
-    width: .2vw;
-    background:rgb(40, 0, 0);
+
+.list-group-item {
+    border-color: rgba(0, 0, 0, .3);
 }
-#secoes a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: .2vh;
-    background:rgb(40, 0, 0);
-    transition: all 200ms ease-in-out;
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    BS Icons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.bi {
+    transition: var(--transicao-menu);
+    filter: var(--sombra-especial-expand);
 }
-#secoes a:hover::after {
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Menu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+header,
+.navbar-brand,
+.nav-link,
+.dropdown-menu {
+    transition: var(--transicao-menu);
+}
+
+header,
+.navbar {
+    border-radius: var(--borda-menu);
+}
+
+header {
     width: 100%;
+    margin-bottom: var(--espaco-padrao);
+    box-shadow: var(--sombra-box-padrao);
+}
+
+header:hover {
+    box-shadow: var(--sombra-box-expand);
+}
+
+.navbar-brand {
+    color: var(--texto-cor-padrao);
+    font-size: var(--fonte-subtitulo);
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+    color: var(--texto-cor-destaque);
+}
+
+.dropdown-menu {
+    max-height: 40vh;
+    overflow-y: auto;
+    background-color: rgb(235, 235, 235);
+}
+
+.dropdown-menu:hover {
+    background-color: rgb(215, 215, 215);
+}
+
+.dropdown-item {
+    border-radius: .5rem;
+}
+
+.dropdown-item:hover {
+    color: var(--texto-cor-destaque);
+}
+
+.icone-menu:hover {
+    filter: var(--sombra-especial-menu);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Apresentação de conhecimentos
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#infos {
+    display: var(--display-infos);
+    flex-direction: column;
+    margin-top: var(--espaco-padrao);
+    background-color: var(--fundo-sessao);
+    border: var(--borda-padrao);
+    border-radius: .5rem;
+    text-shadow: var(--texto-sombra-padrao);
+    box-shadow: var(--sombra-box-padrao);
+    transition: var(--transicao-padrao);
+}
+
+#infos:hover {
+    box-shadow: var(--sombra-box-expand);
+}
+
+h2 {
+    color: var(--texto-cor-destaque);
+    font-size: var(--fonte-subtitulo);
+    font-weight: bold;
+}
+
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Foto de perfil
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#foto-perfil {
+    background-image: var(--radial-padrao),
+        var(--url-foto-perfil);
+    background-size: cover;
+    position: relative;
+    margin: max(1vw, 1vh);
+    height: 150px;
+    width: 112.5px;
+    box-shadow: 0 0 .5vw rgba(0, 0, 0, .8);
+    transition: var(--transicao-padrao);
+}
+
+#foto-perfil:hover {
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 1);
+    transform: scale(1.1);
+}
+
+#pino-icon {
+    position: absolute;
+    top: -16px;
+    left: 50px;
+    width: 30px;
+    filter: drop-shadow(0 0 .5vw rgba(0, 0, 0, 1));
+    transition: var(--transicao-padrao);
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Apresentação dos sites com demonstração de tecnologia dominada
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    imagens de projeto
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#tarefas-desk {
+    background-image: var(--url-tarefas-desktop);
+}
+#tarefas-mob {
+    background-image: var(--url-tarefas-mobile);
+}
+
+#links-desk {
+    background-image: var(--url-link-desktop);
+}
+#links-mob {
+    background-image: var(--url-link-mobile);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Principal
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#sites {
+    display: var(--display-sites);
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: var(--espaco-padrao) auto;
+    background-color: var(--fundo-sessao);
+    box-shadow: var(--sombra-box-padrao);
+    border-radius: .5rem;
+    border: var(--borda-padrao);
+    text-shadow: var(--texto-sombra-padrao);
+    transition: var(--transicao-padrao);
+}
+
+#sites:hover {
+    box-shadow: var(--sombra-box-expand);
+}
+
+#btn-anterior, #btn-proximo {
+    position: absolute;
+    top: 50%;
+}
+#btn-anterior {
+    left: 0;
+}
+#btn-proximo {
+    right: 0;
+}
+
+#seta-esquerda, #seta-direita {
+    transition: var(--transicao-padrao);
+    filter: var(--sombra-especial);
+}
+#seta-esquerda:hover, #seta-direita:hover {
+    cursor: pointer;
+    filter: var(--sombra-especial-expand);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Preview versão Desktop
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.site-desktop {
+    background-size: 7.55em 4.3em;
+    background-repeat: no-repeat;
+    background-position: top .26em left .98em;
+}
+
+.desktop{
+    width: 9.5em;
+    filter: var(--sombra-especial);
+    transition: var(--transicao-padrao);
+}
+
+.desktop:hover{
+    cursor: pointer;
+    filter: var(--sombra-especial-expand);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Preview versão Mobile
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.site-mobile {
+    background-size: 4.1em 8.64em;
+    background-repeat: no-repeat;
+    background-position: top .28em center;
+}
+
+.celular {
+    height: 9.1em;
+    width: 4.6em;
+    transition: var(--transicao-padrao);
+    filter: var(--sombra-especial);
+}
+
+.celular:hover {
+    cursor: pointer;
+    filter: var(--sombra-especial-expand);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Contatos e Download
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#contatos {
+    align-items: center;
+    margin-bottom: var(--espaco-padrao);
+    padding: var(--espaco-padrao);
+    background-color: var(--fundo-sessao);
+    box-shadow: var(--sombra-box-padrao);
+    border-radius: .5rem;
+    border: var(--borda-padrao);
+    text-shadow: var(--texto-sombra-padrao);
+    transition: var(--transicao-padrao);
+}
+
+#contatos:hover {
+    box-shadow: var(--sombra-box-expand);
+}
+
+.wrapper-contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--espaco-padrao);
+    border: solid .1vw rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    text-shadow: var(--texto-sombra-padrao);
+}
+
+.wrapper-contato a {
+    max-height: 200px;
+    max-width: 200px;
+    filter: var(--sombra-especial);
+    transition: var(--transicao-padrao);
+}
+
+.wrapper-contato a:hover {
+    filter: var(--sombra-especial-expand);
 }
