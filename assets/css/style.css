@@ -16,10 +16,13 @@
     /* URL Imagens */
     --url-borda-imagem: url("../img/wooden-frame.webp");
     --url-foto-perfil: url("../img/profile-pic.webp");
+
     --url-tarefas-desktop: url("../img/task-desktop.webp");
     --url-tarefas-mobile: url("../img/task-mobile.webp");
     --url-link-mobile: url("../img/link-mobile.webp");
     --url-link-desktop: url("../img/link-desktop.webp");
+    --url-galeria-desktop: url("../img/galeria-desktop.webp");
+    --url-galeria-mobile: url("../img/galeria-mobile.webp");
 
     /* Tamanho de Fonte */
     --fonte-titulo: 2.6rem;
@@ -296,18 +299,11 @@ h2 {
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~
     imagens de projeto
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-#tarefas-desk {
-    background-image: var(--url-tarefas-desktop);
+#desk {
+    background-image: var(--url-galeria-desktop);
 }
-#tarefas-mob {
-    background-image: var(--url-tarefas-mobile);
-}
-
-#links-desk {
-    background-image: var(--url-link-desktop);
-}
-#links-mob {
-    background-image: var(--url-link-mobile);
+#mob {
+    background-image: var(--url-galeria-mobile);
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~
