@@ -57,7 +57,6 @@
 
     /* Espaçamento */
     --espaco-padrao: max(1vw, 1vh);
-    --espaco-sessoes: max(.5vw, .5vh);
 
     /* Transições */
     --transicao-padrao: all 200ms ease-in-out;
@@ -66,10 +65,12 @@
     /* Sombras box */
     --sombra-box-padrao: .1vw .1vw .5vw rgba(0, 0, 0, 0.7);
     --sombra-box-expand: .1vw .1vw 1vw rgba(0, 0, 0, 1);
+    --sombra-box-lista: .1vw .1vw .5vw rgba(0, 0, 0, 0.4);
 
     /* Sombras Especiais */
-    --sombra-especial: drop-shadow(.1vw .1vw .5vw rgba(0, 0, 0, 0.4));
-    --sombra-especial-expand: drop-shadow(.1vw .1vw 1vw rgba(191, 255, 234, .6));
+    --sombra-especial: drop-shadow(.1rem .1rem .2rem rgba(0, 0, 0, 0.8));
+    --sombra-especial-expand: drop-shadow(.1rem .1rem .5rem rgba(191, 255, 234, .6));
+    --sombra-especial-menu: drop-shadow(.1rem .1rem .2rem rgba(0, 0, 0, 0.3));
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -131,12 +132,14 @@ body {
 }
 
 #infos,
-#sites {
-    max-width: 94%;
+#sites,
+#contatos {
+    width: 94%;
+    max-width: 1000px;
 }
 
 #contatos {
-    max-width: 98%;
+    width: 98%;
 }
 
 
@@ -145,12 +148,32 @@ body {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .destaque {
     color: var(--texto-cor-destaque);
-    font-size: var(--fonte-destaque);
     letter-spacing: 1px;
     text-shadow: var(--texto-sombra-padrao);
 }
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    List Group
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.list-group {
+    box-shadow: var(--sombra-box-lista);
+}
 
+.limpo {
+    background-color: rgba(255, 255, 255, .7);
+}
+
+.list-group-item {
+    border-color: rgba(0, 0, 0, .3);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    BS Icons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.bi {
+    transition: var(--transicao-menu);
+    filter: var(--sombra-especial-expand);
+}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Menu
@@ -205,13 +228,8 @@ header:hover {
     color: var(--texto-cor-destaque);
 }
 
-.bi {
-    transition: var(--transicao-menu);
-    filter: var(--sombra-especial-expand);
-}
-
-.bi:hover {
-    filter: var(--sombra-especial);
+.icone-menu:hover {
+    filter: var(--sombra-especial-menu);
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -221,7 +239,6 @@ header:hover {
     display: var(--display-infos);
     flex-direction: column;
     margin-top: var(--espaco-padrao);
-    padding: var(--espaco-sessoes);
     background-color: var(--fundo-sessao);
     border: var(--borda-padrao);
     border-radius: .5rem;
@@ -239,6 +256,8 @@ h2 {
     font-size: var(--fonte-subtitulo);
     font-weight: bold;
 }
+
+
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Foto de perfil
@@ -291,13 +310,16 @@ h2 {
     background-image: var(--url-link-mobile);
 }
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Principal
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #sites {
     display: var(--display-sites);
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     margin: var(--espaco-padrao) auto;
-    padding: var(--espaco-sessoes);
     background-color: var(--fundo-sessao);
     box-shadow: var(--sombra-box-padrao);
     border-radius: .5rem;
@@ -310,13 +332,24 @@ h2 {
     box-shadow: var(--sombra-box-expand);
 }
 
-.arrow {
-    transition: var(--transicao-padrao);
+#btn-anterior, #btn-proximo {
+    position: absolute;
+    top: 50%;
+}
+#btn-anterior {
+    left: 0;
+}
+#btn-proximo {
+    right: 0;
 }
 
-.arrow:hover {
-    cursor: pointer;
+#seta-esquerda, #seta-direita {
+    transition: var(--transicao-padrao);
     filter: var(--sombra-especial);
+}
+#seta-esquerda:hover, #seta-direita:hover {
+    cursor: pointer;
+    filter: var(--sombra-especial-expand);
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -360,46 +393,13 @@ h2 {
     filter: var(--sombra-especial-expand);
 }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Splide
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-.splide__track {
-    border-radius: 1rem;
-    box-shadow: var(--shadow-box-imagem);
-    background-color: transparent;
-}
-
-.splide__arrow {
-    transition: var(--transicao-padrao);
-    background-color: var(--cor-link-menu-hover);
-    opacity: .5;
-}
-
-.splide__slide {
-    border-radius: 1rem;
-}
-
-#splide-slider-sobre {
-    max-width: 100%;
-}
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Descrição do site
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-.observacao {
-    font-size: var(--fonte-observacao);
-    color: var(--texto-cor-destaque);
-}
-
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Contatos e Download
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #contatos {
     align-items: center;
     margin-bottom: var(--espaco-padrao);
-    padding: var(--espaco-sessoes);
+    padding: var(--espaco-padrao);
     background-color: var(--fundo-sessao);
     box-shadow: var(--sombra-box-padrao);
     border-radius: .5rem;

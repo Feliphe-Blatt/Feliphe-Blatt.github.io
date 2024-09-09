@@ -64,12 +64,12 @@
                   Projetos
                 </a>
                 <ul class="dropdown-menu p-2">
-                  <li><a class="dropdown-item" href="#">Galeria de fotos</a></li>
-                  <li><a class="dropdown-item" href="#">Turma Connect</a></li>
-                  <li><a class="dropdown-item" href="#">Primeiros Socorros</a></li>
-                  <li><a class="dropdown-item" href="#">C.R.U.D.: Vanilla Js</a></li>
-                  <li><a class="dropdown-item" href="#">C.R.U.D.: Flask + Bs</a></li>
-                  <li><a class="dropdown-item" href="#">Link-Tree</a></li>
+                  <li><button class="dropdown-item" onclick="alert('Galeria de fotos')">Galeria de fotos</button></li>
+                  <li><button class="dropdown-item" onclick="alert('Turma Connect')">Turma Connect</button></li>
+                  <li><button class="dropdown-item" onclick="alert('Primeiros Socorros')">Primeiros Socorros</button></li>
+                  <li><button class="dropdown-item" onclick="alert('C.R.U.D.: Vanilla Js')">C.R.U.D.: Vanilla Js</button></li>
+                  <li><button class="dropdown-item" onclick="alert('C.R.U.D.: Flask + Bs')">C.R.U.D.: Flask + Bs</button></li>
+                  <li><button class="dropdown-item" onclick="alert('Link-Tree')">Link-Tree</button></li>
                 </ul>
               </li>
 
@@ -79,18 +79,18 @@
                   <div class="row justify-content-between m-1">
                     <div class="col-1 m-1">
                       <a target="_blank" href="./assets/downloads/FelipheBlatt-2024.pdf">
-                        <i class="bi bi-filetype-pdf"></i>
+                        <i class="bi bi-filetype-pdf icone-menu"></i>
                       </a>
                     </div>
                     <div class="col-1 m-1">
                       <a target="_blank"
                         href="https://api.whatsapp.com/send?phone=5583981858594&text=Oi%20Feliphe%2C%20vim%20pelo%20seu%20Portfolio!">
-                        <i class="bi bi-whatsapp"></i>
+                        <i class="bi bi-whatsapp icone-menu"></i>
                       </a>
                     </div>
                     <div class="col-1 m-1">
                       <a target="_blank" href="https://github.com/Feliphe-Blatt">
-                        <i class="bi bi-github"></i>
+                        <i class="bi bi-github icone-menu"></i>
                       </a>
                     </div>
                   </div>
@@ -117,32 +117,33 @@
             paixão por sistemas embarcados e energias renováveis. Tenho uma sólida experiência em várias
             linguagens de programação e ferramentas de desenvolvimento.
             <br><br>
-            <b class="destaque">Não vivo sem música <i class="bi bi-music-note-list"></i> e café <i class="bi bi-cup-hot-fill"></i>.</b>
+            <b class="destaque">Não vivo sem música <i class="bi bi-music-note-list icone-menu"></i> e café <i
+                class="bi bi-cup-hot-fill icone-menu"></i>.</b>
             <br><br>
             Quem sabe podemos trabalhar juntos?<br>Os links estão no menu e rodapé da página!
           </p>
         </article>
 
         <article class="row m-1">
-          <div class="col">
-            <h2>Linguagens:</h2>
-            <ul>
-              <li>Java</li>
-              <li>C/C++</li>
-              <li>Python</li>
-              <li>HTML + CSS</li>
-              <li>JavaScript</li>
+          <div class="col-md-6">
+            <ul class="list-group">
+              <li class="list-group-item list-group-item-success display-6">Linguagens</li>
+              <li class="list-group-item limpo">Java</li>
+              <li class="list-group-item limpo">C/C++</li>
+              <li class="list-group-item limpo">Python</li>
+              <li class="list-group-item limpo">HTML + CSS</li>
+              <li class="list-group-item limpo">JavaScript</li>
             </ul>
           </div>
 
-          <div class="col">
-            <h2>Ferramentas e Tecnologias:</h2>
-            <ul>
-              <li>Git</li>
-              <li>Flask</li>
-              <li>Bootstrap</li>
-              <li>Figma (design e prototipagem)</li>
-              <li>Protocolos de Comunicação / APIs</li>
+          <div class="col-md-6">
+            <ul class="list-group">
+              <li class="list-group-item list-group-item-success display-6">Ferramentas e Tecnologias</li>
+              <li class="list-group-item limpo">Git</li>
+              <li class="list-group-item limpo">Flask</li>
+              <li class="list-group-item limpo">Bootstrap</li>
+              <li class="list-group-item limpo">Figma (design e prototipagem)</li>
+              <li class="list-group-item limpo">Protocolos de Comunicação / APIs</li>
             </ul>
           </div>
         </article>
@@ -150,67 +151,71 @@
     </section>
 
     <!-- Sites -->
+    <section id="sites" class="container row align-items-center">
 
-    <section id="sites" class="container align-items-center">
+      <!-- botão para projeto anterior -->
+      <div class="col-1">
+        <button id="btn-anterior" class="btn" onclick="alert('Projeto Anterior!');">
+          <img id="seta-esquerda" src="./assets/img/leftArrow.svg" alt="Ir para projeto anterior">
+        </button>
+      </div>
 
-      <!-- splide slider -->
-      <div class="splide" id="splide-slider-sobre">
-        <div class="splide__track">
-          <ul class="splide__list">
+      <!-- Principal -->
+      <div id="sites-main" class="container col-10">
+        <h2 class="display-4 destaque p-2 text-center">Galeria de fotos</h2>
 
-            <!--------------------------------------------------------->
-            
-            <!--------------------------------------------------------->
-            <li class="splide__slide">
+        <div class="container flex-column">
+          
+          <!-- Imagens -->
+          <div class="d-flex align-items-center justify-content-evenly flex-wrap">
 
-              <h2 class="display-5 p-2  text-center">Gerenciador de tarefas</h2>
+            <figure id="tarefas-desk" class="site-desktop">
+              <a target="_blank" href="https://feliphe-blatt.github.io/galeria/">
+                <img src="./assets/img/notebook.png" class="desktop" title="Preview Versão Desktop"
+                  alt="Preview Versão Desktop do Site">
+              </a>
+            </figure>
+            <figure id="tarefas-mob" class="site-mobile">
+              <a target="_blank" href="https://feliphe-blatt.github.io/galeria/">
+                <img src="./assets/img/celular.png" class="celular" title="Preview Versão Mobile"
+                  alt="Preview Versão Mobile do Site">
+              </a>
+            </figure>
+          </div>
 
-              <div class="container px-5">
-                <div class="row flex-column">
-                  <div class="col-12 d-flex align-items-center justify-content-evenly">
+          <!-- Descrição e tecnologias-->
+          <div class="container">
+            <div class="row p-3">
+              <div class="col-md-6 p-0">
+                <ul class="list-group">
+                  <li class="list-group-item list-group-item-success display-6"> Descrição</li>
+                  <li class="list-group-item limpo">
+                    <p>
+                      Galeria de fotos artísticas e paisagens. Enquanto faço estudos no desenvolvimento web, decidi criar uma galeria de arte para compartilhar minhas fotos como exemplo.
+                    </p>
+                  </li>
 
-                    <figure id="tarefas-desk" class="site-desktop">
-                      <a target="_blank" href="https://feliphe-blatt.github.io/tarefas/">
-                        <img src="./assets/img/notebook.png" class="desktop" title="Preview Versão Desktop"
-                          alt="Preview Versão Desktop do Site">
-                      </a>
-                    </figure>
-                    <figure id="tarefas-mob" class="site-mobile">
-                      <a target="_blank" href="https://feliphe-blatt.github.io/tarefas/">
-                        <img src="./assets/img/celular.png" class="celular" title="Preview Versão Mobile"
-                          alt="Preview Versão Mobile do Site">
-                      </a>
-                    </figure>
-                  </div>
-
-                  <!-- Descrição e tecnologias-->
-                  <div class="container">
-                    <div class="row p-3">
-                      <div class="col-md-6">
-                        <h3>Descrição:</h3>
-                        <p>
-                          Projeto de um gerenciador de tarefas com as funções de criar, ler,
-                          atualizar e deletar tarefas.
-                        </p>
-                      </div>
-                      <div class="col p-3">
-                        <h3 class="text-center">Tecnologias:</h3>
-                        <ul class="fit text-start">
-                          <li>HTML/CSS</li>
-                          <li>JavaScript</li>
-                          <li>Bootstrap</li>
-                          <li>Splide</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                </ul>
               </div>
-            </li>
-            <!--------------------------------------------------------->
-            
-          </ul>
+              <div class="col-md-6 p-0">
+                <ul class="list-group">
+                  <li class="list-group-item list-group-item-success display-6"> Tecnologias</li>
+                  <li class="list-group-item limpo">HTML/CSS</li>
+                  <li class="list-group-item limpo">JavaScript</li>
+                  <li class="list-group-item limpo">Bootstrap</li>
+                  <li class="list-group-item limpo">Splide</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      
+      <!-- botão para próximo projeto -->
+      <div class="col-1">
+        <button id="btn-proximo" class="btn" onclick="alert('Próximo Projeto!');">
+          <img id="seta-direita" src="./assets/img/rightArrow.svg" alt="Ir para próximo projeto">
+        </button>
       </div>
 
     </section>
