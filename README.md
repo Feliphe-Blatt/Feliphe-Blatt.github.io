@@ -1,5 +1,5 @@
 # Portfólio: Feliphe S. Blatt
-- Portfólio (em atualização): [Portfólio 1.6](https://feliphe-blatt.github.io/portfolio)
+- Portfólio (em atualização): [Portfólio 1.8](https://feliphe-blatt.github.io/portfolio)
 
 ## Backlog do Portfólio
 
@@ -8,19 +8,18 @@
 - [x] Criar seções de info, sites e contato
 - [x] Adicionar links para redes sociais
 - [x] Otimizar imagens com SVG e Webp
+- [x] Reformulando descrições de perfil e projetos
+- [x] Adicionar projetos existentes ao portfólio
 
 ### Na Sprint
-- [ ] Estudando e aplicando BootStrap e Splide
-- [ ] Melhorar a responsividade do site
-- [ ] Reformulando descrições de perfil e projetos
-- [ ] Adicionar projetos existentes ao portfólio
+- [ ] Estudando e aplicando BootStrap
+- [ ] Melhorar a responsividade e acessibilidade do site
 
 ## Tecnologias utilizadas para desenvolver o portfólio até então
 
 - Html + CSS com variáveis de controle e Media Queries
 - SVG's e Webp para melhor desempenho ao carregar elementos
 - BootStrap
-- Splide sliders
 
 ## Projetos no Portfólio
 
