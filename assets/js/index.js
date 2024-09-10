@@ -14,12 +14,12 @@ const projetos = [
     link: 'https://feliphe-blatt.github.io/galeria/'
   },
   {
-    titulo: 'Turma Connect',
+    titulo: 'Turma Connect (Em desenvolvimento)',
     descricao: 'Plataforma para conectar alunos, monitoria e professores. Permite a criação de turmas, atividades individuais ou em grupo, compartilhamento de materiais e comunicação entre os membros.',
     tecnologias: ['Em breve...'],
     imagens: {
-      desktop: 'url("assets/img/galeria-desktop.webp")',
-      mobile: 'url("assets/img/galeria-mobile.webp")'
+      desktop: 'url("assets/img/turma-desktop.webp")',
+      mobile: 'url("assets/img/turma-mobile.webp")'
     },
     link: 'https://github.com/Feliphe-Blatt/turmaconnect'
   },
@@ -28,8 +28,8 @@ const projetos = [
     descricao: 'Aplicativo para fornecer instruções de primeiros socorros em situações de emergência. Inclui tutoriais em ilustrações e texto.',
     tecnologias: ['HTML/CSS', 'BootStrap'],
     imagens: {
-      desktop: 'url("assets/img/galeria-desktop.webp")',
-      mobile: 'url("assets/img/socorros-mobile.png")'
+      desktop: 'url("assets/img/socorros-desktop.webp")',
+      mobile: 'url("assets/img/socorros-mobile.webp")'
     },
     link: 'https://feliphe-blatt.github.io/primeiros-socorros/'
   },
@@ -48,8 +48,8 @@ const projetos = [
     descricao: 'Aplicação CRUD utilizando Flask e Bootstrap. Permite criar, ler, atualizar e deletar registros com uma interface amigável e responsiva. Também é uma SPA (Single Page Application), mudando somente as rotas e o conteúdo atual.',
     tecnologias: ['HTML/CSS', 'Python', 'Flask', 'Bootstrap'],
     imagens: {
-      desktop: 'url("assets/img/galeria-desktop.webp")',
-      mobile: 'url("assets/img/galeria-mobile.webp")'
+      desktop: 'url("assets/img/flask-desktop.webp")',
+      mobile: 'url("assets/img/flask-mobile.webp")'
     },
     link: 'https://github.com/Feliphe-Blatt/crud-flask'
   },
