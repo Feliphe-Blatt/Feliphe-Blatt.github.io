@@ -79,17 +79,53 @@ function scrollToSites() {
   Função genérica para atualizar o projeto
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 function atualizarProjeto(projeto) {
-  document.querySelector('#sites-main h2').innerHTML = projeto.titulo;
-  document.querySelector('#descricao-projeto p').innerHTML = projeto.descricao;
-  document.querySelector('#tecnologias-projeto').innerHTML = projeto.tecnologias.map(tec => `<li class="list-group-item limpo">${tec}</li>`).join('');
+  const titulo = document.querySelector('#sites-main h2');
+  const descricao = document.querySelector('#descricao-projeto p');
+  const tecnologias = document.querySelector('#tecnologias-projeto');
+  const desktopImg = document.querySelector('#desk');
+  const mobileImg = document.querySelector('#mob');
 
-  // Atualizar imagens de fundo
-  document.querySelector('#desk').style.backgroundImage = projeto.imagens.desktop;
-  document.querySelector('#mob').style.backgroundImage = projeto.imagens.mobile;
-  
-  // Atualizar links
-  document.querySelector('#desk a').href = projeto.link;
-  document.querySelector('#mob a').href = projeto.link;
+  // Adicionar classes de animação para fade out
+  titulo.classList.add('fade-out');
+  descricao.classList.add('fade-out');
+  tecnologias.classList.add('fade-out');
+  desktopImg.classList.add('fade-out');
+  mobileImg.classList.add('fade-out');
+
+  // Esperar a animação terminar antes de atualizar o conteúdo
+  setTimeout(() => {
+    // Atualizar conteúdo
+    titulo.innerHTML = projeto.titulo;
+    descricao.innerHTML = projeto.descricao;
+    tecnologias.innerHTML = projeto.tecnologias.map(tec => `<li class="list-group-item limpo">${tec}</li>`).join('');
+    desktopImg.style.backgroundImage = projeto.imagens.desktop;
+    mobileImg.style.backgroundImage = projeto.imagens.mobile;
+    document.querySelector('#desk a').href = projeto.link;
+    document.querySelector('#mob a').href = projeto.link;
+
+    // Remover classes de animação para fade out
+    titulo.classList.remove('fade-out');
+    descricao.classList.remove('fade-out');
+    tecnologias.classList.remove('fade-out');
+    desktopImg.classList.remove('fade-out');
+    mobileImg.classList.remove('fade-out');
+
+    // Adicionar classes de animação para fade in
+    titulo.classList.add('fade-in');
+    descricao.classList.add('fade-in');
+    tecnologias.classList.add('fade-in');
+    desktopImg.classList.add('fade-in');
+    mobileImg.classList.add('fade-in');
+
+    // Remover classes de animação após a animação terminar
+    setTimeout(() => {
+      titulo.classList.remove('fade-in');
+      descricao.classList.remove('fade-in');
+      tecnologias.classList.remove('fade-in');
+      desktopImg.classList.remove('fade-in');
+      mobileImg.classList.remove('fade-in');
+    }, 300); // Duração da animação em milissegundos
+  }, 300); // Duração da animação fade out em milissegundos
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

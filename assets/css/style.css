@@ -159,6 +159,7 @@ body {
     List Group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .list-group {
+    background-color: rgba(255, 255, 255, .7);
     box-shadow: var(--sombra-box-lista);
 }
 
@@ -306,6 +307,7 @@ h2 {
 #desk {
     background-image: var(--url-galeria-desktop);
 }
+
 #mob {
     background-image: var(--url-galeria-mobile);
 }
@@ -332,29 +334,37 @@ h2 {
     box-shadow: var(--sombra-box-expand);
 }
 
-#btn-anterior, #btn-proximo {
+#btn-anterior,
+#btn-proximo {
     transition: var(--transicao-padrao);
     padding: 0;
     position: absolute;
     top: 50%;
     border-radius: 50%;
 }
+
 #btn-anterior {
     left: 0;
 }
+
 #btn-proximo {
     right: 0;
 }
-#btn-anterior:active, #btn-proximo:active {
+
+#btn-anterior:active,
+#btn-proximo:active {
     border: none;
     transform: scale(.5);
 }
 
-#seta-esquerda, #seta-direita {
+#seta-esquerda,
+#seta-direita {
     transition: var(--transicao-padrao);
     filter: var(--sombra-especial);
 }
-#seta-esquerda:hover, #seta-direita:hover {
+
+#seta-esquerda:hover,
+#seta-direita:hover {
     cursor: pointer;
 }
 
@@ -367,13 +377,13 @@ h2 {
     background-position: top .26em left .98em;
 }
 
-.desktop{
+.desktop {
     width: 9.5em;
     filter: var(--sombra-especial);
     transition: var(--transicao-padrao);
 }
 
-.desktop:hover{
+.desktop:hover {
     cursor: pointer;
     filter: var(--sombra-especial-expand);
 }
@@ -397,6 +407,33 @@ h2 {
 .celular:hover {
     cursor: pointer;
     filter: var(--sombra-especial-expand);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Animação de transição
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.fade-in {
+    animation: fadeIn 300ms ease-in;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.fade-out {
+    animation: fadeOut 300ms ease-out;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
