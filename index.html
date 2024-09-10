@@ -44,7 +44,7 @@
         <div class="container-fluid">
 
           <!-- Início -->
-          <a class="navbar-brand" href="./index.html">Prazer, Feliphe blatt!</a>
+          <a class="navbar-brand" href="./index.html" tabindex="0" aria-label="Início">Prazer, Feliphe blatt!</a>
 
           <!-- Hamburguer -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -59,17 +59,22 @@
 
               <!-- Drop-Down -->
               <li class="nav-item dropdown m-1">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Projetos
                 </a>
                 <ul class="dropdown-menu p-2">
-                  <li><button class="dropdown-item" onclick="alert('Galeria de fotos')">Galeria de fotos</button></li>
-                  <li><button class="dropdown-item" onclick="alert('Turma Connect')">Turma Connect</button></li>
-                  <li><button class="dropdown-item" onclick="alert('Primeiros Socorros')">Primeiros Socorros</button></li>
-                  <li><button class="dropdown-item" onclick="alert('C.R.U.D.: Vanilla Js')">C.R.U.D.: Vanilla Js</button></li>
-                  <li><button class="dropdown-item" onclick="alert('C.R.U.D.: Flask + Bs')">C.R.U.D.: Flask + Bs</button></li>
-                  <li><button class="dropdown-item" onclick="alert('Link-Tree')">Link-Tree</button></li>
+                  <li><button class="dropdown-item" title="Abrir galeria de fotos" aria-label="Abrir galeria de fotos" role="button"
+                      tabindex="0" onclick="alert('Galeria de fotos')">Galeria de fotos</button></li>
+                  <li><button class="dropdown-item" title="Abrir Turma Connect" aria-label="Abrir Turma Connect" role="button"
+                      tabindex="0" onclick="alert('Turma Connect')">Turma Connect</button></li>
+                  <li><button class="dropdown-item" title="Abrir Primeiros Socorros" aria-label="Abrir Primeiros Socorros"
+                      role="button" tabindex="0" onclick="alert('Primeiros Socorros')">Primeiros Socorros</button></li>
+                  <li><button class="dropdown-item" title="Abrir CRUD Vanilla Javascript" aria-label="Abrir CRUD Vanilla JavaScript"
+                      role="button" tabindex="0" onclick="alert('C.R.U.D.: Vanilla Js')">C.R.U.D.: Vanilla Js</button></li>
+                  <li><button class="dropdown-item" title="Abrir CRUD Flask + Bs" aria-label="Abrir CRUD Flask + BootStrap"
+                      role="button" tabindex="0" onclick="alert('C.R.U.D.: Flask + Bs')">C.R.U.D.: Flask + Bs</button></li>
+                  <li><button class="dropdown-item" title="Abrir Link-Tree" aria-label="Abrir Link-Tree" role="button" tabindex="0"
+                      onclick="alert('Link-Tree')">Link-Tree</button></li>
                 </ul>
               </li>
 
@@ -78,18 +83,18 @@
                 <div class="container">
                   <div class="row justify-content-between m-1">
                     <div class="col-1 m-1">
-                      <a target="_blank" href="./assets/downloads/FelipheBlatt-2024.pdf">
+                      <a target="_blank" href="./assets/downloads/FelipheBlatt-2024.pdf" aria-label="Download PDF do currículo">
                         <i class="bi bi-filetype-pdf icone-menu"></i>
                       </a>
                     </div>
                     <div class="col-1 m-1">
                       <a target="_blank"
-                        href="https://api.whatsapp.com/send?phone=5583981858594&text=Oi%20Feliphe%2C%20vim%20pelo%20seu%20Portfolio!">
+                        href="https://api.whatsapp.com/send?phone=5583981858594&text=Oi%20Feliphe%2C%20vim%20pelo%20seu%20Portfolio!" aria-label="Contato via WhatsApp">
                         <i class="bi bi-whatsapp icone-menu"></i>
                       </a>
                     </div>
                     <div class="col-1 m-1">
-                      <a target="_blank" href="https://github.com/Feliphe-Blatt">
+                      <a target="_blank" href="https://github.com/Feliphe-Blatt" aria-label="Perfil no GitHub">
                         <i class="bi bi-github icone-menu"></i>
                       </a>
                     </div>
@@ -155,8 +160,8 @@
 
       <!-- botão para projeto anterior -->
       <div class="col-1">
-        <button id="btn-anterior" class="btn" onclick="alert('Projeto Anterior!');">
-          <img id="seta-esquerda" src="./assets/img/leftArrow.svg" alt="Ir para projeto anterior">
+        <button id="btn-anterior" role="button" class="btn" onclick="alert('Projeto anterior');" tabindex="0">
+          <img id="seta-esquerda" src="./assets/img/leftArrow.svg" alt="Ir para projeto anterior" title="Ir para projeto anterior">
         </button>
       </div>
 
@@ -184,9 +189,8 @@
           </div>
 
           <!-- Descrição e tecnologias-->
-          <div class="container">
-            <div class="row p-3">
-              <div class="col-md-6 p-0">
+            <div class="row p-3 justify-content-evenly">
+              <div class="col-md-6 p-0 m-1">
                 <ul class="list-group">
                   <li class="list-group-item list-group-item-success display-6"> Descrição</li>
                   <li class="list-group-item limpo">
@@ -197,7 +201,7 @@
 
                 </ul>
               </div>
-              <div class="col-md-6 p-0">
+              <div class="col-md-5 p-0 m-1">
                 <ul class="list-group">
                   <li class="list-group-item list-group-item-success display-6"> Tecnologias</li>
                   <li class="list-group-item limpo">HTML/CSS</li>
@@ -207,14 +211,13 @@
                 </ul>
               </div>
             </div>
-          </div>
         </div>
       </div>
       
       <!-- botão para próximo projeto -->
       <div class="col-1">
-        <button id="btn-proximo" class="btn" onclick="alert('Próximo Projeto!');">
-          <img id="seta-direita" src="./assets/img/rightArrow.svg" alt="Ir para próximo projeto">
+        <button id="btn-proximo" role="button" class="btn" onclick="alert('Próximo projeto');" tabindex="0">
+          <img id="seta-direita" src="./assets/img/rightArrow.svg" alt="Ir para próximo projeto" title="Ir para próximo projeto">
         </button>
       </div>
 
@@ -224,7 +227,7 @@
     <section id="contatos" class="container d-flex justify-content-evenly">
 
       <div class="wrapper-contato container">
-        <a target="_blank" href="./assets/downloads/FelipheBlatt-2024.pdf">
+        <a target="_blank" href="./assets/downloads/FelipheBlatt-2024.pdf" aria-label="Download PDF do currículo" title="Download PDF do currículo">
           <svg width="5rem" height="5rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M3.5 8H3V7H3.5C3.77614 7 4 7.22386 4 7.5C4 7.77614 3.77614 8 3.5 8Z" fill="#083336" />
             <path d="M7 10V7H7.5C7.77614 7 8 7.22386 8 7.5V9.5C8 9.77614 7.77614 10 7.5 10H7Z" fill="#083336" />
@@ -237,7 +240,7 @@
       <!---------------------------------------------------------------->
       <div class="wrapper-contato container">
         <a target="_blank"
-          href="https://api.whatsapp.com/send?phone=5583981858594&text=Oi%20Feliphe%2C%20vim%20pelo%20seu%20Portfolio!">
+          href="https://api.whatsapp.com/send?phone=5583981858594&text=Oi%20Feliphe%2C%20vim%20pelo%20seu%20Portfolio!" aria-label="Contato via WhatsApp" title="Contato via WhatsApp">
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="5rem" height="5rem" viewBox="0 0 50 50"
             style="fill:#083336;">
             <path
@@ -248,7 +251,7 @@
       </div>
       <!---------------------------------------------------------------->
       <div class="wrapper-contato container">
-        <a target="_blank" href="https://github.com/Feliphe-Blatt">
+        <a target="_blank" href="https://github.com/Feliphe-Blatt" aria-label="Perfil no GitHub" title="Perfil no GitHub">
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="5rem" height="5rem" viewBox="0 0 50 50"
             style="fill:#083336;">
             <path d="
