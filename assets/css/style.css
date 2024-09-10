@@ -227,6 +227,10 @@ header:hover {
     border-radius: .5rem;
 }
 
+.dropdown-item:active {
+    background-color: var(--fundo-sessao);
+}
+
 .dropdown-item:hover {
     color: var(--texto-cor-destaque);
 }
@@ -315,7 +319,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    margin: var(--espaco-padrao) auto;
+    margin: 5% auto var(--espaco-padrao);
     background-color: var(--fundo-sessao);
     box-shadow: var(--sombra-box-padrao);
     border-radius: .5rem;

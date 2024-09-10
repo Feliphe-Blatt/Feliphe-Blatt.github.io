@@ -63,18 +63,12 @@
                   Projetos
                 </a>
                 <ul class="dropdown-menu p-2">
-                  <li><button class="dropdown-item" title="Abrir galeria de fotos" aria-label="Abrir galeria de fotos" role="button"
-                      tabindex="0" onclick="alert('Galeria de fotos')">Galeria de fotos</button></li>
-                  <li><button class="dropdown-item" title="Abrir Turma Connect" aria-label="Abrir Turma Connect" role="button"
-                      tabindex="0" onclick="alert('Turma Connect')">Turma Connect</button></li>
-                  <li><button class="dropdown-item" title="Abrir Primeiros Socorros" aria-label="Abrir Primeiros Socorros"
-                      role="button" tabindex="0" onclick="alert('Primeiros Socorros')">Primeiros Socorros</button></li>
-                  <li><button class="dropdown-item" title="Abrir CRUD Vanilla Javascript" aria-label="Abrir CRUD Vanilla JavaScript"
-                      role="button" tabindex="0" onclick="alert('C.R.U.D.: Vanilla Js')">C.R.U.D.: Vanilla Js</button></li>
-                  <li><button class="dropdown-item" title="Abrir CRUD Flask + Bs" aria-label="Abrir CRUD Flask + BootStrap"
-                      role="button" tabindex="0" onclick="alert('C.R.U.D.: Flask + Bs')">C.R.U.D.: Flask + Bs</button></li>
-                  <li><button class="dropdown-item" title="Abrir Link-Tree" aria-label="Abrir Link-Tree" role="button" tabindex="0"
-                      onclick="alert('Link-Tree')">Link-Tree</button></li>
+                  <li><button id="btn-galeria" class="dropdown-item" title="Abrir galeria de fotos" aria-label="Abrir galeria de fotos" role="button" tabindex="0" onclick="showProject(0)">Galeria de fotos</button></li>
+                  <li><button id="btn-turma" class="dropdown-item" title="Abrir Turma Connect" aria-label="Abrir Turma Connect" role="button" tabindex="0" onclick="showProject(1)">Turma Connect</button></li>
+                  <li><button id="btn-socorros" class="dropdown-item" title="Abrir Primeiros Socorros" aria-label="Abrir Primeiros Socorros" role="button" tabindex="0" onclick="showProject(2)">Primeiros Socorros</button></li>
+                  <li><button id="btn-crud-js" class="dropdown-item" title="Abrir CRUD Vanilla Javascript" aria-label="Abrir CRUD Vanilla JavaScript" role="button" tabindex="0" onclick="showProject(3)">C.R.U.D.: Vanilla Js</button></li>
+                  <li><button id="btn-crud-flask" class="dropdown-item" title="Abrir CRUD Flask + Bs" aria-label="Abrir CRUD Flask + BootStrap" role="button" tabindex="0" onclick="showProject(4)">C.R.U.D.: Flask + Bs</button></li>
+                  <li><button id="btn-linktree" class="dropdown-item" title="Abrir Link-Tree" aria-label="Abrir Link-Tree" role="button" tabindex="0" onclick="showProject(5)">Link-Tree</button></li>
                 </ul>
               </li>
 
@@ -160,7 +154,7 @@
 
       <!-- botão para projeto anterior -->
       <div class="col-1">
-        <button id="btn-anterior" role="button" class="btn" onclick="alert('Projeto anterior');" tabindex="0">
+        <button id="btn-anterior" role="button" class="btn" onclick="showPreviousProject();" tabindex="0">
           <img id="seta-esquerda" src="./assets/img/leftArrow.svg" alt="Ir para projeto anterior" title="Ir para projeto anterior">
         </button>
       </div>
@@ -193,7 +187,7 @@
               <div class="col-md-6 p-0 m-1">
                 <ul class="list-group">
                   <li class="list-group-item list-group-item-success display-6"> Descrição</li>
-                  <li class="list-group-item limpo">
+                  <li id="descricao-projeto" class="list-group-item limpo">
                     <p>
                       Galeria de fotos artísticas e paisagens. Enquanto faço estudos no desenvolvimento web, decidi criar uma galeria de arte para compartilhar minhas fotos como exemplo.
                     </p>
@@ -203,11 +197,13 @@
               </div>
               <div class="col-md-5 p-0 m-1">
                 <ul class="list-group">
-                  <li class="list-group-item list-group-item-success display-6"> Tecnologias</li>
-                  <li class="list-group-item limpo">HTML/CSS</li>
-                  <li class="list-group-item limpo">JavaScript</li>
-                  <li class="list-group-item limpo">Bootstrap</li>
-                  <li class="list-group-item limpo">Splide</li>
+                  <li class="list-group-item list-group-item-success display-6">Tecnologias</li>
+                  <div id="tecnologias-projeto">
+                    <li class="list-group-item limpo">HTML/CSS</li>
+                    <li class="list-group-item limpo">JavaScript</li>
+                    <li class="list-group-item limpo">Bootstrap</li>
+                    <li class="list-group-item limpo">Splide</li>
+                  </div>
                 </ul>
               </div>
             </div>
@@ -216,7 +212,7 @@
       
       <!-- botão para próximo projeto -->
       <div class="col-1">
-        <button id="btn-proximo" role="button" class="btn" onclick="alert('Próximo projeto');" tabindex="0">
+        <button id="btn-proximo" role="button" class="btn" onclick="showNextProject();" tabindex="0">
           <img id="seta-direita" src="./assets/img/rightArrow.svg" alt="Ir para próximo projeto" title="Ir para próximo projeto">
         </button>
       </div>
