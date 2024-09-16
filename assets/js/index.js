@@ -14,6 +14,16 @@ const projetos = [
     link: 'https://feliphe-blatt.github.io/galeria/'
   },
   {
+    titulo: 'Telas de Login e Cadastro',
+    descricao: 'Telas de login e cadastro responsivas. Com validação de campos e feedback visual para o usuário.',
+    tecnologias: ['HTML/CSS', 'JavaScript', 'Bootstrap'],
+    imagens: {
+      desktop: 'url("assets/img/login-cadastro-desktop.webp")',
+      mobile: 'url("assets/img/login-cadastro-mobile.webp")'
+    },
+    link: 'https://feliphe-blatt.github.io/login-cadastro/'
+  },
+  {
     titulo: 'Turma Connect (Em desenvolvimento)',
     descricao: 'Plataforma para conectar alunos, monitoria e professores. Permite a criação de turmas, atividades individuais ou em grupo, compartilhamento de materiais e comunicação entre os membros.',
     tecnologias: ['Em breve...'],
