@@ -15,7 +15,7 @@
 - [ ] Estudando e aplicando BootStrap
 - [ ] Melhorar a responsividade e acessibilidade do site
 
-## Tecnologias utilizadas para desenvolver o portfólio até então
+## Tecnologias utilizadas para desenvolver o portfólio até então:
 
 - Html + CSS com variáveis de controle e Media Queries
 - SVG's e Webp para melhor desempenho ao carregar elementos
@@ -50,6 +50,13 @@
   > Exemplo de uma galeria de imagens responsiva
 - Tecnologias utilizadas: Html, CSS, JS, BootStrap e Splide
 - Link: [Galeria de fotos](https://feliphe-blatt.github.io/galeria/)
+
+### [Telas de Login e Cadastro]
+
+- Descrição:
+  > Exemplo de telas de login e cadastro responsivas
+- Tecnologias utilizadas: Html, CSS, JS e BootStrap
+- Link: [Telas de Login e Cadastro](https://feliphe-blatt.github.io/login-cadastro/)
 
 ## Contato
 
